@@ -1,0 +1,30 @@
+
+<div class="container">
+  <h1>Trainers List</h1>
+  
+
+  <div class="row">
+    <div class=" card card-inverse  " *ngFor="let c of detail">
+      <img src=".\assets\images\trainer1.jpg" class="card-img-top" alt="Image Description" height="150rem">
+      <h3 class="card-title border-bottom font-monospace">{{c.trainerName}}</h3>
+      <p class="card-text">Experiance : {{c.experiance}} Months</p>
+      <p class="card-text">About : {{c.about}}</p>
+      
+      <div id="buttons">
+      <!-- <button class="btn btn-primary"  data-toggle="model" data-target="#addCourseModal" (click)="passCourseId(c.TrainerId)">Update</button> -->
+      <!-- <button class="btn btn-danger" (click)=" deleteCourse(c.courseId,c.courseName)">Delete</button> -->
+      </div>
+      <!-- <button [routerLink]="['/Quizzes',c.courseId]" class="btn btn-success mt-4">View Quizzes</button> -->
+
+    </div>
+    <div  class="col-2 card card-inverse text-white " id="add" data-toggle="modal" data-target="#myModal">
+    <h1 id="plus"> &plus;</h1>
+    </div>
+  </div>
+
+</div>
+<app-add-trainers></app-add-trainers>
+
+
+      <!-- <app-update-course data="{{selectedTrainerId}}"></app-update-course> -->
+
